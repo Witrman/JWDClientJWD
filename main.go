@@ -119,6 +119,7 @@ func clearing(w http.ResponseWriter, r *http.Request) {
 		errExc(tmpl.Execute(w, data))
 		return
 	}
+
 	client := &http.Client{}
 	request, err := http.NewRequest("GET", "https://witmanstasjwd.herokuapp.com/clear?user="+username, nil)
 	errExc(err)
